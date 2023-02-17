@@ -15,6 +15,7 @@ const verifyInDatabase = adminController.paramsAdminSql;
 async function verifytoken(req, res, next) {
   try {
     let check = await verifyInDatabase("sasas");
+    
     const bearerHeader = req.headers["authorization"];
     if (typeof bearerHeader !== "undefined") {
       const bearer = bearerHeader.split(" ");
