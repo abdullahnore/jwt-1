@@ -10,6 +10,8 @@ const verifyInDatabase = adminController.paramsAdminSql;
 
 
 //verify token middleware
+
+
 async function verifytoken(req, res, next) {
   try {
     let check = await verifyInDatabase("sasas");
@@ -31,5 +33,7 @@ async function verifytoken(req, res, next) {
     // ideally build a separate middleware for handling middleware errors
     return next(new ErrorHandler(error, 401));
   }
+  
+  
 }
 module.exports = { verifytoken };
