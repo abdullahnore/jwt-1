@@ -1,5 +1,5 @@
 //code snippet of jwt middleware
-// other imports are part of a seperate curd application 
+// other imports are part of a seperate crud application 
 //ErrorHandler class is a extention of in built Error which is a handler which is then passed to the error middleware for entire application
 
 const jwt = require("jsonwebtoken");
