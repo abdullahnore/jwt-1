@@ -5,6 +5,7 @@
 const jwt = require("jsonwebtoken");
 const ErrorHandler = require("../utils/errorHandler");
 const adminController = require("../controller/admin/paramsAdmin");
+
 const verifyInDatabase = adminController.paramsAdminSql;
 
 
@@ -14,6 +15,7 @@ const verifyInDatabase = adminController.paramsAdminSql;
 
 async function verifytoken(req, res, next) {
   try {
+  
     let check = await verifyInDatabase("sasas");
     
     const bearerHeader = req.headers["authorization"];
