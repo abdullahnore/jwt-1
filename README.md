@@ -32,6 +32,7 @@ async function verifytoken(req, res, next) {
     }
   } catch (error) {
     // ideally build a separate middleware for handling middleware errors
+    
     return next(new ErrorHandler(error, 401));
   }
   
